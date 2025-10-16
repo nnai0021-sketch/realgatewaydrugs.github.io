@@ -1,0 +1,108 @@
+body {
+    background-color: rgb(48, 51, 46);
+}
+
+@font-face {
+    font-family:'FRADMCN';
+    src: url('FRADMCN.woff') format('woff');
+}
+
+@font-face {
+    font-family:'FREIGHTSEMIBOLD';
+    src: url('FONNTS.COM-FREIGHT-TEXT-PRO-SEMIBOLD-.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'FREIGHTMEDITALIC';
+    src: url(FONNTS.COM-FREIGHT-TEXT-PRO-MEDIUM.woff);
+}
+
+div.title {
+    font-family: 'FRADMCN';
+    color: rgb(244, 244, 244);
+    font-size: 120px;
+    letter-spacing: -0.04em;
+}
+
+div.subtitle {
+    font-family: 'FRADMCN';
+    color: rgb(244, 244, 244);
+    font-size: 70px;
+    letter-spacing: -0.04em;
+}
+
+div.body {
+    font-family: 'FREIGHTSEMIBOLD';
+    font-size: 20px;
+}
+
+div.quote {
+    font-family: 'FREIGHTMEDITALIC';
+    font-size: 30px;
+}
+
+div.margintop10 {
+    margin-top: 10px;
+}
+
+div.margintop30 {
+    margin-top: 30px;
+}
+
+div.marginbottom10 {
+    margin-bottom: 10px;
+}
+
+
+div.textwhite {
+    color: rgb(244, 244, 244);
+}
+
+span.textpink {
+    color: rgb(164, 74, 63);
+}
+
+div.bgwhite {
+    background-color: rgb(244, 244, 244);;
+}
+
+
+div.centered {
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+}
+
+div.rightalign {
+    justify-content: flex-end;
+}
+
+div.width100 {
+    width: 100%;
+}
+
+div.width66 {
+    width: 66%;
+}
+
+div.width50 {
+    width: 50%;
+}
+
+div.width33 {
+    width: 33%;
+}
+
+
+div.flexcontainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+span.stat {
+        font-family: 'FRADMCN';
+    color: rgb(244, 244, 244);
+    font-size: 100px;
+    letter-spacing: -0.04em;
+}
+        
