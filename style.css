@@ -1,6 +1,8 @@
 body {
     background-color: rgb(48, 51, 46);
+    overflow-x: hidden;
 }
+
 
 @font-face {
     font-family:'FRADMCN';
@@ -20,25 +22,37 @@ body {
 div.title {
     font-family: 'FRADMCN';
     color: rgb(244, 244, 244);
-    font-size: 120px;
+    font-size: 30px;
     letter-spacing: -0.04em;
+    position: sticky;
+    top: 0px;
+    width: calc(100% + 8px);
+    margin-left: -8px;
+    margin-top: -10px;
+    background-color: rgb(164, 74, 63);
+    z-index: 999;
 }
 
 div.subtitle {
     font-family: 'FRADMCN';
     color: rgb(244, 244, 244);
-    font-size: 70px;
-    letter-spacing: -0.04em;
+    font-size: 150px;
+    letter-spacing: -0.03em;
 }
 
 div.body {
     font-family: 'FREIGHTSEMIBOLD';
-    font-size: 20px;
+    font-size: 27px;
 }
 
 div.quote {
     font-family: 'FREIGHTMEDITALIC';
-    font-size: 30px;
+    font-size: 50px;
+}
+
+div.quotelarger {
+    font-family: 'FREIGHTMEDITALIC';
+    font-size: 70px;
 }
 
 div.margintop10 {
@@ -49,10 +63,36 @@ div.margintop30 {
     margin-top: 30px;
 }
 
+div.margintop50 {
+    margin-top: 50px;
+}
+
+div.marginbottom30 {
+    margin-bottom: 30px;
+}
+
+div.margintop100 {
+    margin-top: 100px;
+}
+
+div.margintop200 {
+    margin-top: 200px;
+}
+
 div.marginbottom10 {
     margin-bottom: 10px;
 }
 
+div.marginbottom100 {
+    margin-bottom: 100px;
+}
+
+div.bottomline {
+    border-bottom: 5px solid rgb(244, 244, 244);
+    padding: 5px;
+    width: calc(100% + 8px);
+    margin-left: -8px;
+}
 
 div.textwhite {
     color: rgb(244, 244, 244);
@@ -77,6 +117,10 @@ div.rightalign {
     justify-content: flex-end;
 }
 
+div.rightaligntext {
+    text-align: right;
+}
+
 div.width100 {
     width: 100%;
 }
@@ -93,6 +137,13 @@ div.width33 {
     width: 33%;
 }
 
+div.width40 {
+    width: 40%;
+}
+
+div.width60 {
+    width: 60%;
+}
 
 div.flexcontainer {
     display: flex;
@@ -100,9 +151,53 @@ div.flexcontainer {
 }
 
 span.stat {
-        font-family: 'FRADMCN';
+    font-family: 'FRADMCN';
     color: rgb(244, 244, 244);
-    font-size: 100px;
+    font-size: 200px;
     letter-spacing: -0.04em;
+}
+
+div.twocolumns {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+
+}
+
+section.textcol {
+    width: 66%;
+    min-width: 0;
+}
+
+section.imagecol {
+    width: 33%;
+    position: relative;
+}
+
+section.imagecol img {
+  max-width: 100%;
+  min-width: 100%;
+  height: auto;
+}
+
+div.stick {
+  position: sticky;
+  top: 50px;
+  display: block;
+}
+
+.fullpage img {
+    width: calc(100% + 24px);
+    margin-left: -8px;
+    margin-right: -8px;
+    max-width: calc(100% + 24px);
+    min-width: calc(100% + 24px);
+    height: auto;
+}
+
+.flexing img {
+  max-width: 100%;
+  min-width: 100%;
+  height: auto;
 }
         
