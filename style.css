@@ -1,6 +1,7 @@
 body {
     background-color: rgb(48, 51, 46);
     overflow-x: hidden;
+    left: 0;
 }
 
 
@@ -19,9 +20,13 @@ body {
     src: url(FONNTS.COM-FREIGHT-TEXT-PRO-MEDIUM.woff);
 }
 
+@font-face {
+    font-family: 'UBUNTU';
+    src: url(UbuntuMono-R.woff);
+}
+
 div.title {
     font-family: 'FRADMCN';
-    color: rgb(244, 244, 244);
     font-size: 30px;
     letter-spacing: -0.04em;
     position: sticky;
@@ -29,13 +34,24 @@ div.title {
     width: calc(100% + 8px);
     margin-left: -8px;
     margin-top: -10px;
-    background-color: rgb(164, 74, 63);
+    background-color: rgb(48, 51, 46);
     z-index: 999;
+}
+
+.whitebackground {
+    background-color: rgb(239, 243, 235);
+    width: calc(100% + 24px);
+    margin-left: -8px;
+    margin-right:-8px;
+    margin-bottom: -8px;
+}
+
+.textblack {
+    color:black;
 }
 
 div.subtitle {
     font-family: 'FRADMCN';
-    color: rgb(244, 244, 244);
     font-size: 150px;
     letter-spacing: -0.03em;
 }
@@ -55,6 +71,11 @@ div.quotelarger {
     font-size: 70px;
 }
 
+div.caption {
+    font-family: 'UBUNTU';
+    font-size:20px;
+}
+
 div.margintop10 {
     margin-top: 10px;
 }
@@ -69,6 +90,14 @@ div.margintop50 {
 
 div.marginbottom30 {
     margin-bottom: 30px;
+}
+
+div.paddingbottom15 {
+    padding-bottom: 15px;
+}
+
+div.paddingtop15 {
+    padding-top: 15px;
 }
 
 div.margintop100 {
@@ -87,15 +116,41 @@ div.marginbottom100 {
     margin-bottom: 100px;
 }
 
+div.marginbottom200 {
+    margin-bottom: 200px;
+}
+
 div.bottomline {
-    border-bottom: 5px solid rgb(244, 244, 244);
+    border-bottom: 5px solid rgb(239, 243, 235);
     padding: 5px;
     width: calc(100% + 8px);
     margin-left: -8px;
 }
 
-div.textwhite {
-    color: rgb(244, 244, 244);
+
+div.toplinewhite {
+    border-top: 5px solid rgb(239, 243, 235);
+    padding: 5px;
+    width: calc(100% + 8px);
+    margin-left: -8px;
+}
+
+div.topline {
+    border-top: 5px solid black;
+    padding: 5px;
+    width: calc(100% + 8px);
+    margin-left: -8px;
+}
+
+div.bottomlineblack {
+    border-bottom: 5px solid black;
+    padding: 5px;
+    width: calc(100% + 8px);
+    margin-left: -8px;
+}
+
+.textwhite {
+    color: rgb(239, 243, 235);
 }
 
 span.textpink {
@@ -103,7 +158,7 @@ span.textpink {
 }
 
 div.bgwhite {
-    background-color: rgb(244, 244, 244);;
+    background-color: rgb(239, 243, 235);;
 }
 
 
@@ -152,7 +207,7 @@ div.flexcontainer {
 
 span.stat {
     font-family: 'FRADMCN';
-    color: rgb(244, 244, 244);
+    color: rgb(239, 243, 235);
     font-size: 200px;
     letter-spacing: -0.04em;
 }
@@ -174,15 +229,55 @@ section.imagecol {
     position: relative;
 }
 
+@keyframes animblur {
+    0%   {
+        filter: blur(100px);
+        -webkit-filter: blur(100px);
+    }
+
+    50% {
+        filter: blur(75px);
+        -webkit-filter: blur(75px);
+    }
+
+    100% {
+        filter: blur(100px);
+        -webkit-filter: blur(100px);
+    }
+}
+
+@keyframes animinv {
+    0%, 54.9%, 55.1%, 94.9%, 95.1%, 100%   {
+        filter: invert(0%);
+        -webkit-filter: invert(0%);
+    }
+
+    55%, 95%   {
+        filter: invert(100%);
+        -webkit-filter: invert(100%);
+    }
+
+}
+
 section.imagecol img {
   max-width: 100%;
   min-width: 100%;
   height: auto;
+  animation: animblur 5s linear infinite;
+
 }
+
+
 
 div.stick {
   position: sticky;
-  top: 50px;
+  top: 300px;
+  display: block;
+}
+
+div.stickbottom {
+  position: sticky;
+  top: 75vh;
   display: block;
 }
 
@@ -193,6 +288,7 @@ div.stick {
     max-width: calc(100% + 24px);
     min-width: calc(100% + 24px);
     height: auto;
+    animation: animinv 10s linear infinite;
 }
 
 .flexing img {
